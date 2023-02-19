@@ -2,7 +2,12 @@ import Head from 'next/head';
 import {Banner, Header, MediumCard, SmallCard, LargeCard, Footer} from '@/components';
 import {ICardData, IExploreData} from "@/model/data.model";
 
-export default function Home({exploreData, cardsData}: { exploreData: IExploreData[], cardsData: ICardData[] }) {
+interface IHomeProps {
+    exploreData: IExploreData[],
+    cardsData: ICardData[]
+}
+
+export default function Home({exploreData, cardsData}: IHomeProps) {
     return (
         <>
             <Head>
@@ -34,7 +39,7 @@ export default function Home({exploreData, cardsData}: { exploreData: IExploreDa
                     <LargeCard img="https://links.papareact.com/4cj" title="The Greatest Outdoors"
                                description="Wishlists curated by Airbnb." buttonText="Get Inspired"/>
                 </main>
-                <Footer/>
+                {/*<Footer/>*/}
             </div>
         </>
     )
