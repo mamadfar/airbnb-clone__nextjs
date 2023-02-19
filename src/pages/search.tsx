@@ -41,7 +41,7 @@ const Search: FC<ISearchProps> = ({searchResults}) => {
                         ))}
                     </div>
                 </section>
-                <section className="hidden xl:inline-flex xl:min-w-[600px]">
+                <section className="hidden xl:inline-flex xl:min-w-[510px] 2xl:min-w-[650px]">
                     <Map searchResults={searchResults}/>
                 </section>
             </main>
